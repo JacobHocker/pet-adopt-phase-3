@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.float "price"
     t.string "note"
-    t.string "likes"
-    t.string "dislikes"
+    t.boolean "kid_friendly"
+    t.boolean "outdoor_animal"
+    t.boolean "animal_aggressive"
     t.integer "shelter_id"
   end
 
@@ -31,8 +32,9 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.float "price"
     t.string "note"
-    t.string "likes"
-    t.string "dislikes"
+    t.boolean "kid_friendly"
+    t.boolean "outdoor_animal"
+    t.boolean "animal_aggressive"
     t.integer "shelter_id"
   end
 
@@ -43,8 +45,9 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.float "price"
     t.string "note"
-    t.string "likes"
-    t.string "dislikes"
+    t.boolean "kid_friendly"
+    t.boolean "outdoor_animal"
+    t.boolean "animal_aggressive"
     t.integer "shelter_id"
   end
 
