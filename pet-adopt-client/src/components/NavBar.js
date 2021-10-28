@@ -1,11 +1,11 @@
 import React from "react";
 
-function Submit() {
+function NavBar() {
     return(
         <div>
-            <h1>Submit</h1>
+            <h1>NavBar</h1>
         </div>
     )
 }
 
-export default Submit;
+export default NavBar;
