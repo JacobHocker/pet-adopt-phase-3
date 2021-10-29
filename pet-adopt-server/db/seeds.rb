@@ -7,32 +7,15 @@ Shelter.destroy_all
 puts 
 
 puts "Creating seeds..."
-puts "Creating dogs..."
-Dog.create([
-    {
-        name: "Rocko",
-        breed: "German Sheperd",
-        image_url: "placeholder",
-        age: 3,
-        price: 120.99,
-        note: "Rocko has a sweet disposition",
-        kid_friendly: true,
-        outdoor_animal: false,
-        animal_aggressive: false,
-        shelter_id: 1
-    },
-    {
-        name: "Jimmy",
-        breed: "Pitbull",
-        image_url: "placeholder",
-        age: 10,
-        price: 59.99,
-        note: "Jimmy loves to play",
-        kid_friendly: true,
-        outdoor_animal: false,
-        animal_aggressive: false,
-        shelter_id: 3
-    }
-])
-puts "Finished dogs..."
+puts 
+puts "Creating shelters"
+shelter1 = Shelter.create(
+    name: "CAP Animal Shelter & Adoption",
+    shelter_img_url: "./public/images/cap-shelter.jpg",
+    address: "12547 West Road, Houston, Tx 77082 USA",
+    shelter_notes: "A shelter based around Citizens for Animal Protection. Come by and meet your new best friend. All animals are rescues!",
+    shelter_rating: 4.3,
+    kill_shelter: false 
+)
 
+binding.pry

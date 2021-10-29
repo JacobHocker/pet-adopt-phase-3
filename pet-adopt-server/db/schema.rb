@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
 
   create_table "shelters", force: :cascade do |t|
     t.string "name"
+    t.string "shelter_img_url"
     t.string "address"
     t.string "shelter_notes"
     t.float "shelter_rating"
