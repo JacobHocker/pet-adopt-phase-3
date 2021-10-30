@@ -4,7 +4,7 @@ import Shelter from "./Shelter";
 
 function ShelterContainer() {
     const [shelters, setShelters] = useState([]);
-    const [dogs, setDogs] = useState([]);
+    
 
     useEffect(() => {
         fetch("http://localhost:9292/shelters")
@@ -27,6 +27,7 @@ function ShelterContainer() {
         address={shelter.address}
         notes={shelter.shelter_notes}
         rating={shelter.shelter_rating}
+        dogs={shelter.dogs}
         />
     ))
     return(

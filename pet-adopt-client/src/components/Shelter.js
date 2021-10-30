@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Dogs from "./Dogs";
 
-function Shelter({name, img, address, notes, rating, dogInfo }) {
-    const [dogs, setDogs] = useState([]);
+function Shelter({name, img, address, notes, rating, dogs}) {
+    
 
-    useEffect(() => {
-        fetch("http://localhost:9292/dogs")
-        .then((r) => r.json())
-        .then((dogs) => setDogs(dogs));
-    }, [])
+    
 
     const dogList = dogs.map((dog) => (
         <Dogs 
-        key={dog.shelter_id}
+        key={dog.id}
         name={dog.name}
         breed={dog.breed}
         />
@@ -27,7 +23,7 @@ function Shelter({name, img, address, notes, rating, dogInfo }) {
             <p>{address}</p>
             <p>{notes}</p>
             <p>{rating}</p>
-            
+            {dogList}
         </div>
     )
 }
