@@ -27,11 +27,12 @@ function ShelterContainer() {
         address={shelter.address}
         notes={shelter.shelter_notes}
         rating={shelter.shelter_rating}
+        killShelter={shelter.kill_shelter}
         dogs={shelter.dogs}
         />
     ))
     return(
-        <section className='container'>
+        <section className='shelter-container'>
             {shelterList}
         </section>
     )

@@ -17,11 +17,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.string "breed"
     t.string "image_url"
     t.integer "age"
-    t.float "price"
+    t.integer "price"
     t.string "note"
-    t.boolean "kid_friendly"
-    t.boolean "outdoor_animal"
-    t.boolean "animal_aggressive"
     t.integer "shelter_id"
   end
 
@@ -32,9 +29,6 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.float "price"
     t.string "note"
-    t.boolean "kid_friendly"
-    t.boolean "outdoor_animal"
-    t.boolean "animal_aggressive"
     t.integer "shelter_id"
   end
 
@@ -43,11 +37,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.string "breed"
     t.string "image_url"
     t.integer "age"
-    t.float "price"
+    t.integer "price"
     t.string "note"
-    t.boolean "kid_friendly"
-    t.boolean "outdoor_animal"
-    t.boolean "animal_aggressive"
     t.integer "shelter_id"
   end
 
@@ -56,8 +47,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.string "shelter_img_url"
     t.string "address"
     t.string "shelter_notes"
-    t.float "shelter_rating"
-    t.boolean "kill_shelter"
+    t.integer "shelter_rating"
+    t.string "kill_shelter"
   end
 
   create_table "special_and_service_pets", force: :cascade do |t|
@@ -65,7 +56,7 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.string "breed"
     t.string "image_url"
     t.integer "age"
-    t.float "price"
+    t.integer "price"
     t.string "note"
     t.string "special_needs"
     t.string "service"

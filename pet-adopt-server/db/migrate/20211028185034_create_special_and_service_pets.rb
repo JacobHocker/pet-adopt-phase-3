@@ -5,7 +5,7 @@ class CreateSpecialAndServicePets < ActiveRecord::Migration[6.1]
       t.string :breed
       t.string :image_url 
       t.integer :age
-      t.float :price 
+      t.integer :price 
       t.string :note
       t.string :special_needs
       t.string :service 
