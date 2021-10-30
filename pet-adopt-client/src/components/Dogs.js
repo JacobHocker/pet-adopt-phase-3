@@ -1,9 +1,10 @@
 import React from "react";
 
-function Dogs() {
+function Dogs({ name, breed }) {
     return(
         <div>
-            <h1>Dogs</h1>
+            <h3>{name}</h3>
+            <p>{breed}</p>
         </div>
     )
 }

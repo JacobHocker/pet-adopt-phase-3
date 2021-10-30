@@ -8,6 +8,6 @@ class ApplicationController < Sinatra::Base
 
     get "/shelters" do
         shelters = Shelter.all.order(:name)
-        shelters.to_json
+        shelters.to_json(include: :dogs)
     end
 end
