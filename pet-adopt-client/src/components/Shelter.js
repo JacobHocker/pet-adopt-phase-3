@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CardGroup from 'react-bootstrap/CardGroup'
 import Dogs from "./Dogs";
 
 function Shelter({name, img, address, notes, rating, killShelter, dogs}) {
@@ -20,7 +21,7 @@ function Shelter({name, img, address, notes, rating, killShelter, dogs}) {
   
 
     return(
-        <div className='unique-shelter'>
+        <div className='individual-shelter'>
             <h1>Shelters</h1>
             <h2>{name}</h2>
             <img className='shelter-images' src={img} alt={name} />
@@ -28,7 +29,7 @@ function Shelter({name, img, address, notes, rating, killShelter, dogs}) {
             <p>{notes}</p>
             <p>{rating}</p>
             <p>{killShelter}</p>
-            {dogList}
+            <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{dogList}</CardGroup>
         </div>
     )
 }

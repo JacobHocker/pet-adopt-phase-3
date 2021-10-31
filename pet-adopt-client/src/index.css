@@ -1,11 +1,13 @@
-.dog-images {
-    height: 150px;
+.dog-cards {
+    max-width: 300px;
 }
 
-.unique-shelter {
-    border: 2px solid black;
-}
+
 
 .shelter-images {
     height: 550px;
+}
+
+.friend-logo {
+    padding: 20px;
 }

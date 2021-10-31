@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Shelter from "./Shelter";
-
+import { Container } from 'react-bootstrap';
 
 function ShelterContainer() {
     const [shelters, setShelters] = useState([]);
@@ -12,12 +12,7 @@ function ShelterContainer() {
         .then((shelters) => setShelters(shelters));
     }, [])
 
-    /*const dogInfo = shelters.dogs.map((dog) =>(
-        <div className='doggo'>
-            <h2>{dog.name}</h2>
-            <p>{dog.breed}</p>
-        </div>
-    ))*/
+    
 
     const shelterList = shelters.map((shelter) => (
         <Shelter
@@ -33,7 +28,9 @@ function ShelterContainer() {
     ))
     return(
         <section className='shelter-container'>
+            <Container style={{ textAlign: "center" }} >
             {shelterList}
+            </Container>
         </section>
     )
 }
