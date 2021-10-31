@@ -7,8 +7,6 @@ class CreateSpecialAndServicePets < ActiveRecord::Migration[6.1]
       t.integer :age
       t.integer :price 
       t.string :note
-      t.string :special_needs
-      t.string :service 
       t.integer :shelter_id
     end
   end
