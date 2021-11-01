@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import CardGroup from 'react-bootstrap/CardGroup'
 import Cats from "./Cats";
 import Dogs from "./Dogs";
+import ExoticPets from "./ExoticPets";
 
-function Shelter({name, img, address, notes, rating, killShelter, dogs, cats}) {
+function Shelter({name, img, address, notes, rating, killShelter, dogs, cats, exotics}) {
     
     const catList = cats.map((cat) => (
         <Cats
@@ -17,7 +18,17 @@ function Shelter({name, img, address, notes, rating, killShelter, dogs, cats}) {
         />
     ))
     
-
+    const exoticList = exotics.map((exotic) => (
+        <ExoticPets 
+        key={exotic.id}
+        name={exotic.name}
+        breed={exotic.breed}
+        image={exotic.image_url}
+        age={exotic.age}
+        price={exotic.price}
+        note={exotic.note}
+        />
+    ))
     const dogList = dogs.map((dog) => (
         <Dogs 
         key={dog.id}
@@ -55,6 +66,11 @@ function Shelter({name, img, address, notes, rating, killShelter, dogs, cats}) {
             <h2>Browse {name} selection of <strong>feline companions</strong>! Looking for their new home!</h2>
             <br />
             <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{catList}</CardGroup>
+            <br />
+            <h2>Browse {name} selection of <strong>exotic pets</strong>! Looking their own little oasis!</h2>
+            <br />
+            <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{exoticList}</CardGroup>
+            <br />
         </div>
     )
 }

@@ -1,6 +1,6 @@
-class CreateExoticPets < ActiveRecord::Migration[6.1]
+class CreateExotics < ActiveRecord::Migration[6.1]
   def change
-    create_table :exotic_pets do |t|
+    create_table :exotics do |t|
       t.string :name
       t.string :breed
       t.string :image_url 

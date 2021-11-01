@@ -1,8 +1,8 @@
 puts "Destroying old data..."
 Dog.destroy_all
 Cat.destroy_all
-ExoticPet.destroy_all
-SpecialAndServicePet.destroy_all
+Exotic.destroy_all
+Special.destroy_all
 Shelter.destroy_all
 puts 
 
@@ -61,4 +61,15 @@ Cat.create(
     price: 550,
     note: "Loves to sleep ,and be held.",
     shelter_id: shelter1.id)
+puts 
+puts "Creating exotic pets..."
+Exotic.create(
+    name: "Jar Jar",
+    breed: "Fennec Fox",
+    image_url: "./images/fennec1.png",
+    age: 6,
+    price: 2_000,
+    note: "Absolutley loves to burrow and being out in the heat!",
+    shelter_id: shelter2.id
+)
 

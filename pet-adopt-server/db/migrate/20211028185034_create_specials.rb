@@ -1,6 +1,6 @@
-class CreateSpecialAndServicePets < ActiveRecord::Migration[6.1]
+class CreateSpecials < ActiveRecord::Migration[6.1]
   def change
-    create_table :special_and_service_pets do |t|
+    create_table :specials do |t|
       t.string :name
       t.string :breed
       t.string :image_url 

@@ -3,8 +3,8 @@ import { Card, Button } from 'react-bootstrap';
 
 function Cats({ name, breed, image, age, price, note }) {
     return(
-        <div className="cat-cards">
-            <Card  className="dog-cards">
+        <div className="cat-container">
+            <Card  className="cat-cards">
                 <Card.Img variant="top"  src={image} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

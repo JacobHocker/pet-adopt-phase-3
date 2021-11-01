@@ -25,6 +25,7 @@ function ShelterContainer() {
         killShelter={shelter.kill_shelter}
         dogs={shelter.dogs}
         cats={shelter.cats}
+        exotics={shelter.exotics}
         />
     ))
     return(

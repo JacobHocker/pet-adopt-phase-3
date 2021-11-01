@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_185512) do
     t.integer "shelter_id"
   end
 
-  create_table "exotic_pets", force: :cascade do |t|
+  create_table "exotics", force: :cascade do |t|
     t.string "name"
     t.string "breed"
     t.string "image_url"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_185512) do
     t.integer "shelter_id"
   end
 
-  create_table "family_pets", force: :cascade do |t|
+  create_table "families", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.integer "price"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_185512) do
     t.integer "individual_seller_id"
   end
 
-  create_table "individual_sellers", force: :cascade do |t|
+  create_table "individuals", force: :cascade do |t|
     t.string "seller_name"
     t.string "note"
   end
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_185512) do
     t.string "kill_shelter"
   end
 
-  create_table "special_and_service_pets", force: :cascade do |t|
+  create_table "specials", force: :cascade do |t|
     t.string "name"
     t.string "breed"
     t.string "image_url"
