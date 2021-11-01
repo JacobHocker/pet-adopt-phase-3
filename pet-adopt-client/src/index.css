@@ -2,7 +2,10 @@
     max-width: 300px;
 }
 
-
+.individual-shelter {
+    padding: 50px;
+    border: 1px dotted black;
+}
 
 .shelter-images {
     height: 550px;

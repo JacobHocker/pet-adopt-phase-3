@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
 function Dogs({ name, breed, image, age, price, note }) {
     return(
@@ -17,6 +17,7 @@ function Dogs({ name, breed, image, age, price, note }) {
                 <Card.Text>
                 Note about {name}: {note}
                 </Card.Text>
+                <Button variant="primary">Adopted!</Button>{' '}<Button variant="secondary">Edit Pet</Button>{' '}
             </Card.Body>
             <Card.Footer>
                 <small className="text-muted">Price: ${price}.00</small>

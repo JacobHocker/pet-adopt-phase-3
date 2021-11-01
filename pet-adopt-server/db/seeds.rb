@@ -51,4 +51,14 @@ Dog.create(
     price: 210,
     note: "Very loyal and obedient dog.",
     shelter_id: shelter1.id)
+puts 
+puts "Creating cats..."
+Cat.create(
+    name: "Nala",
+    breed: "Munchkin",
+    image_url: "./images/munchkin1.png",
+    age: 2,
+    price: 550,
+    note: "Loves to sleep ,and be held.",
+    shelter_id: shelter1.id)
 

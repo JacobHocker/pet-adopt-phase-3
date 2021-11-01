@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
 import CardGroup from 'react-bootstrap/CardGroup'
+import Cats from "./Cats";
 import Dogs from "./Dogs";
 
-function Shelter({name, img, address, notes, rating, killShelter, dogs}) {
+function Shelter({name, img, address, notes, rating, killShelter, dogs, cats}) {
     
-
+    const catList = cats.map((cat) => (
+        <Cats
+        key={cat.id}
+        name={cat.name}
+        breed={cat.breed}
+        image={cat.image_url}
+        age={cat.age}
+        price={cat.price}
+        note={cat.note}
+        />
+    ))
     
 
     const dogList = dogs.map((dog) => (
@@ -22,14 +33,28 @@ function Shelter({name, img, address, notes, rating, killShelter, dogs}) {
 
     return(
         <div className='individual-shelter'>
-            <h1>Shelters</h1>
-            <h2>{name}</h2>
+            <h2>Shelter Name: {name}</h2>
+            <br />
             <img className='shelter-images' src={img} alt={name} />
-            <p>{address}</p>
-            <p>{notes}</p>
-            <p>{rating}</p>
-            <p>{killShelter}</p>
+            <br />
+            <h3>Shelter Address:</h3>
+            <h4>{address}</h4>
+            <br />
+            <h3>Notes on {name}:</h3>
+            <h4>{notes}</h4>
+            <br />
+            <h3>Overall Customer Rating:</h3>
+            <h4>{rating} stars</h4>
+            <br />
+            <h3>Kill shelter? {killShelter}</h3>
+            <br />
+            <h2>Browse {name} selection of <strong>man's best friend</strong>.  Ready to be adpoted today!</h2> 
+            <br />
             <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{dogList}</CardGroup>
+            <br />
+            <h2>Browse {name} selection of <strong>feline companions</strong>! Looking for their new home!</h2>
+            <br />
+            <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{catList}</CardGroup>
         </div>
     )
 }
