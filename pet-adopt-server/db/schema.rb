@@ -64,14 +64,4 @@ ActiveRecord::Schema.define(version: 2021_10_31_185512) do
     t.string "kill_shelter"
   end
 
-  create_table "specials", force: :cascade do |t|
-    t.string "name"
-    t.string "breed"
-    t.string "image_url"
-    t.integer "age"
-    t.integer "price"
-    t.string "note"
-    t.integer "shelter_id"
-  end
-
 end

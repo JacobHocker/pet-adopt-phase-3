@@ -5,9 +5,9 @@ function NavBar() {
     return(
         <Navbar bg="primary" variant="dark" fixed="top">
         <Container>
-        <Navbar.Brand href="home">Furry Friend Finder</Navbar.Brand>
+        <Navbar.Brand href="/">Furry Friend Finder</Navbar.Brand>
         <Nav className="me-auto">     
-          <Nav.Link href="home">Home</Nav.Link>   
+          <Nav.Link href="/">Home</Nav.Link>   
           <Nav.Link href="shelters">Shelters</Nav.Link>
           <Nav.Link href="individual-sellers">Individual Sellers</Nav.Link>
           <Nav.Link href="service-animals">Service Animals</Nav.Link>

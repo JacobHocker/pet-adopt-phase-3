@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import CardGroup from 'react-bootstrap/CardGroup'
+import CardGroup from 'react-bootstrap/CardGroup';
+
 import Cats from "./Cats";
 import Dogs from "./Dogs";
 import ExoticPets from "./ExoticPets";
 
 function Shelter({name, img, address, notes, rating, killShelter, dogs, cats, exotics}) {
-    
     const catList = cats.map((cat) => (
         <Cats
         key={cat.id}
@@ -40,8 +40,8 @@ function Shelter({name, img, address, notes, rating, killShelter, dogs, cats, ex
         note={dog.note}
         />
     ))
-  
-
+    
+    
     return(
         <div className='individual-shelter'>
             <h2>Shelter Name: {name}</h2>

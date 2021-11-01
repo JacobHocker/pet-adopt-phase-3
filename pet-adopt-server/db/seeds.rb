@@ -2,7 +2,6 @@ puts "Destroying old data..."
 Dog.destroy_all
 Cat.destroy_all
 Exotic.destroy_all
-Special.destroy_all
 Shelter.destroy_all
 puts 
 
