@@ -16,7 +16,7 @@ function Home() {
                 <Row>
                     <Col>
                         <h1>Welcome to the one stop shop for adopting your next furry best friends!</h1>
-                        <h1>On this site you can browse from a selection of dogs, cats, exotic animals, service animals, and animals with special needs!</h1> 
+                        <h1>On this site you can browse from a selection of dogs, cats, and exotic animals!</h1> 
                     </Col>
                 </Row>
             </Container> 

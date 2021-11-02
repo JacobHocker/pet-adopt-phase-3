@@ -10,4 +10,17 @@ class ApplicationController < Sinatra::Base
         shelters = Shelter.all.order(:name)
         shelters.to_json(:include => [:dogs, :cats, :exotics])
     end
+
+    post "/dogs" do 
+        dog = Dog.create(
+            name: params[:name],
+            breed: params[:breed],
+            image_url: params[:image_url],
+            age: params[:age],
+            price: params[:price],
+            note: params[:note],
+            shelter_id: params[:shelter_id]
+        )
+        dog.to_json
+    end
 end

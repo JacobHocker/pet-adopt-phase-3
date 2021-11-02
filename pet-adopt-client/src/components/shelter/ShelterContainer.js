@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Shelter from "./Shelter";
 import { Container, Row, Col } from 'react-bootstrap';
+import {  ShelterContext } from "./ShelterProvider";
+
 
 function ShelterContainer() {
-    const [shelters, setShelters] = useState([]);
     
-
-    useEffect(() => {
-        fetch("http://localhost:9129/shelters")
-        .then((r) => r.json())
-        .then((shelters) => setShelters(shelters));
-    }, [])
-
-    
+    const { shelters } = useContext(ShelterContext)
 
     const shelterList = shelters.map((shelter) => (
         <Shelter
