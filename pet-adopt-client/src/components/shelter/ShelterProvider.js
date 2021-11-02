@@ -12,7 +12,8 @@ const ShelterProvider = props => {
         .then((shelters) => setShelters(shelters));
     }, [])
 
-
+    
+    
     return(
         <div>
             <ShelterContext.Provider value={{shelters}}>

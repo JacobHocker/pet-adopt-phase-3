@@ -1,14 +1,18 @@
-import React, { useContext} from "react";
-import { ShelterContext } from "../shelter/ShelterProvider";
+import React,{ useState } from "react";
+import DogSubmit from "./DogSubmit";
 
 
 
-function Submit() {
-
-    const { shelters } = useContext(ShelterContext)
+function Submit({ dogs, setDogs }) {
+    
+    function handleAddDog(newDog) {
+        const updatedDogs = [...dogs,newDog]
+        setDogs(updatedDogs)
+    }
+    
     return(
-        <div>
-            <h1></h1>
+        <div className='form-container'>
+            <DogSubmit onAddDog={handleAddDog} />
         </div>
     )
 }

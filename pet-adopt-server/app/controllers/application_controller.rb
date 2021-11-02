@@ -5,6 +5,14 @@ class ApplicationController < Sinatra::Base
         dogs = Dog.all.order(:name)
         dogs.to_json
     end
+    get "/cats" do 
+        cats = Cat.all.order(:name)
+        cats.to_json
+    end
+    get "/exotics" do 
+        exotics = Exotic.all.order(:name)
+        exotics.to_json
+    end
 
     get "/shelters" do
         shelters = Shelter.all.order(:name)
