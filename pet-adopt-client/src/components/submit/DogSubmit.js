@@ -8,7 +8,7 @@ function DogSubmit({ onAddDog }) {
     const [age, setAge] = useState(0)
     const [price, setPrice] = useState(0)
     const [note, setNote] = useState("")
-    const [shelterId, setShelterId] = useState("")
+    const [shelterId, setShelterId] = useState(1)
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -24,7 +24,7 @@ function DogSubmit({ onAddDog }) {
                 age: age,
                 price: price,
                 note: note,
-                shelterId: shelterId,
+                shelter_id: shelterId,
             }),
         })
         .then((r) => r.json())
@@ -61,7 +61,7 @@ function DogSubmit({ onAddDog }) {
                     />
                     <input 
                         className='dog-input'
-                        type="text"
+                        type="number"
                         placeholder="Age of the dog"
                         name="Dog Age"
                         value={age}
@@ -69,7 +69,7 @@ function DogSubmit({ onAddDog }) {
                     />
                     <input 
                         className='dog-input'
-                        type="text"
+                        type="number"
                         placeholder="$ amount for adoption"
                         name="Dog Price"
                         value={price}
@@ -86,7 +86,7 @@ function DogSubmit({ onAddDog }) {
                     />
                     <input 
                         className='dog-input'
-                        type="text"
+                        type="number"
                         placeholder="Shelter I.D."
                         name="Dog Shelter I.D."
                         value={shelterId}

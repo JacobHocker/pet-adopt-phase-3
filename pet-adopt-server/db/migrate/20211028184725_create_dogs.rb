@@ -7,7 +7,7 @@ class CreateDogs < ActiveRecord::Migration[6.1]
       t.integer :age
       t.float :price 
       t.string :note
-      t.string :shelter_id
+      t.integer :shelter_id
     end
   end
 end

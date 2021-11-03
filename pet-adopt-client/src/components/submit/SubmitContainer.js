@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Submit from "./Submit";
 import { Container } from 'react-bootstrap';
 
@@ -6,6 +6,8 @@ function SubmitContainer() {
    const [dogs, setDogs] = useState([])
    const [cats, setCats] = useState([])
    const [exotics, setExotics] = useState([])
+
+   
 
     useEffect(() => {
         fetch("http://localhost:9129/dogs")
@@ -30,7 +32,8 @@ function SubmitContainer() {
     return(
         <div className='submit-container'>
             <Container fluid style={{ textAlign: "center" }}>
-                <Submit dogs={dogs} setDogs={setDogs}
+                <Submit 
+                dogs={dogs} setDogs={setDogs}
                 cats={cats} setCats={setCats}
                 exotics={exotics} setExotics={setExotics}/>
             </Container>

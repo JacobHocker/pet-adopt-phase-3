@@ -9,7 +9,8 @@ puts "Creating seeds..."
 puts 
 puts "Creating shelters"
 Shelter.create(
-    id: "shelter1",
+    #id: "shelter1",
+    shelter_id: 1,
     name: "CAP Animal Shelter & Adoption",
     shelter_img_url: "./images/cap-shelter.jpg",
     address: "12547 West Road, Houston, Tx 77082 USA",
@@ -18,7 +19,8 @@ Shelter.create(
     kill_shelter: "No" 
 )
 Shelter.create(
-    id: "shelter2",
+    #id: "shelter2",
+    shelter_id: 2,
     name: "Houston Humane Society",
     shelter_img_url: "./images/houston-humane-society.jpg",
     address: "14285 Cypress North Houston, Houston, Tx 77041 USA",
@@ -35,7 +37,7 @@ Dog.create(
     age: 1,
     price: 350,
     note: "Rocko can be hard to make listen ,but will melt your heart with cuddling!",
-    shelter_id: "shelter2")
+    shelter_id: 2)
 Dog.create(
     name: "Walter", 
     breed: "Dauschaund", 
@@ -43,7 +45,7 @@ Dog.create(
     age: 1,
     price: 120,
     note: "Walter loves to burrow and go into small spaces",
-    shelter_id: "shelter2")
+    shelter_id: 2)
 Dog.create(
     name: "Titan", 
     breed: "German Shepard", 
@@ -51,7 +53,7 @@ Dog.create(
     age: 4,
     price: 210,
     note: "Very loyal and obedient dog.",
-    shelter_id: "shelter1")
+    shelter_id: 1)
 puts 
 puts "Creating cats..."
 Cat.create(
@@ -61,7 +63,7 @@ Cat.create(
     age: 2,
     price: 550,
     note: "Loves to sleep ,and be held.",
-    shelter_id: "shelter1")
+    shelter_id: 1)
 puts 
 puts "Creating exotic pets..."
 Exotic.create(
@@ -71,6 +73,7 @@ Exotic.create(
     age: 6,
     price: 2_000,
     note: "Absolutley loves to burrow and being out in the heat!",
-    shelter_id: "shelter2"
+    shelter_id: 2
 )
 
+binding.pry
