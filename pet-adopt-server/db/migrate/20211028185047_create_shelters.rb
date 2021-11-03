@@ -1,6 +1,7 @@
 class CreateShelters < ActiveRecord::Migration[6.1]
   def change
-    create_table :shelters do |t|
+    create_table :shelters, id: false do |t|
+      t.string :id, null: false
       t.string :name 
       t.string :shelter_img_url
       t.string :address

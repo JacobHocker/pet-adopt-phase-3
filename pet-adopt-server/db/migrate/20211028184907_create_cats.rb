@@ -7,7 +7,7 @@ class CreateCats < ActiveRecord::Migration[6.1]
       t.integer :age
       t.integer :price 
       t.string :note
-      t.integer :shelter_id
+      t.string :shelter_id
     end
   end
 end

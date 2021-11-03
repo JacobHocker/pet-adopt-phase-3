@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.integer "price"
     t.string "note"
-    t.integer "shelter_id"
+    t.string "shelter_id"
   end
 
   create_table "dogs", force: :cascade do |t|
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.float "price"
     t.string "note"
-    t.integer "shelter_id"
+    t.string "shelter_id"
   end
 
   create_table "exotics", force: :cascade do |t|
@@ -39,10 +39,11 @@ ActiveRecord::Schema.define(version: 2021_10_28_185047) do
     t.integer "age"
     t.integer "price"
     t.string "note"
-    t.integer "shelter_id"
+    t.string "shelter_id"
   end
 
-  create_table "shelters", force: :cascade do |t|
+  create_table "shelters", id: false, force: :cascade do |t|
+    t.string "id", null: false
     t.string "name"
     t.string "shelter_img_url"
     t.string "address"

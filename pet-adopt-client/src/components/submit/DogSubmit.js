@@ -8,7 +8,7 @@ function DogSubmit({ onAddDog }) {
     const [age, setAge] = useState(0)
     const [price, setPrice] = useState(0)
     const [note, setNote] = useState("")
-    const [shelterId, setShelterId] = useState(0)
+    const [shelterId, setShelterId] = useState("")
 
     function handleSubmit(event) {
         event.preventDefault()
