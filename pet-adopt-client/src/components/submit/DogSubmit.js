@@ -20,7 +20,7 @@ function DogSubmit({ onAddDog }) {
             body: JSON.stringify({
                 name: name,
                 breed: breed,
-                imageUrl: imageUrl,
+                image_url: imageUrl,
                 age: age,
                 price: price,
                 note: note,

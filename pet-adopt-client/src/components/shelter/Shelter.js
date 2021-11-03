@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CardGroup from 'react-bootstrap/CardGroup';
 import Cats from "./Cats";
 import Dogs from "./Dogs";

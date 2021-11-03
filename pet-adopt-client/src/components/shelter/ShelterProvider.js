@@ -13,10 +13,9 @@ const ShelterProvider = props => {
     }, [])
 
     
-    
     return(
         <div>
-            <ShelterContext.Provider value={{shelters}}>
+            <ShelterContext.Provider  value={{shelters}}>
                 {props.children} 
             </ShelterContext.Provider>
         </div>
