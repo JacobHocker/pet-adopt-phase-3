@@ -1,5 +1,5 @@
 import React from "react";
-/*import { Route, Switch } from 'react-router-dom';*/
+import { Route, Switch } from 'react-router-dom';
 import Home from "./Home";
 import NavBar from "./NavBar";
 import ShelterContainer from "./shelter/ShelterContainer";
@@ -11,9 +11,17 @@ function App() {
     <div className="App">
       <ShelterProvider>
         <NavBar />
-        <Home />
-        <ShelterContainer />
-        <SubmitContainer />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/shelters">
+            <ShelterContainer />
+          </Route>
+          <Route exact path="/post-animal-for-adoption">
+            <SubmitContainer />
+          </Route>
+        </Switch>
       </ShelterProvider>
     </div>
   );

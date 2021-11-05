@@ -32,6 +32,7 @@ function DogSubmit({ onAddDog }) {
     }
     return(
         <div className='submit-a-dog'> 
+        <Container fluid style={{ textAlign: "center", padding: "150px"}} >
             <h1>If you would like to put a dog up for adoption<br />Please fill out the form below!</h1>
             <form onSubmit={handleSubmit}>
                 <div className='input-dog'>
@@ -75,6 +76,14 @@ function DogSubmit({ onAddDog }) {
                         value={price}
                         onChange={(event) => setPrice(event.target.value)}
                     />
+                    <input 
+                        className='dog-input'
+                        type="number"
+                        placeholder="Shelter I.D."
+                        name="Dog Shelter I.D."
+                        value={shelterId}
+                        onChange={(event) => setShelterId(event.target.value)}
+                    />
                     <textarea
                         className='submit-dog-area'
                         name="Dog not"
@@ -84,21 +93,14 @@ function DogSubmit({ onAddDog }) {
                         value={note}
                         onChange={(event) => setNote(event.target.value)}
                     />
-                    <input 
-                        className='dog-input'
-                        type="number"
-                        placeholder="Shelter I.D."
-                        name="Dog Shelter I.D."
-                        value={shelterId}
-                        onChange={(event) => setShelterId(event.target.value)}
-                    />
+                    
                 </div>
                 <button className='submit-button' type='submit'>
                     Submit For Adoption!
                 </button>
             </form>
         
-        
+        </Container>
         </div>
     )
 }
