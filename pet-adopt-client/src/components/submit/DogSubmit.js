@@ -31,14 +31,14 @@ function DogSubmit({ onAddDog }) {
         .then((newDog) => onAddDog(newDog))
     }
     return(
-        <div className='submit-a-dog'> 
+        <div className='submit-a-animal'> 
         <Container fluid style={{ textAlign: "center" }} >
             <h3 className='submit-header'>If you would like to put a dog up for adoption. Please fill out the form below!</h3>
-            <form onSubmit={handleSubmit} className="dog-form">
-                <div className='input-dog'>
+            <form onSubmit={handleSubmit} className="animal-form">
+                <div className='input-animal'>
                     <div className='one-three'>
                         <input 
-                            className='dog-input'
+                            className='animal-input'
                             type="text"
                             placeholder="Name of the dog"
                             name="Dog Name"
@@ -46,7 +46,7 @@ function DogSubmit({ onAddDog }) {
                             onChange={(event) => setName(event.target.value)}
                         />
                         <input 
-                            className='dog-input'
+                            className='animal-input'
                             type="text"
                             placeholder="Breed of the dog"
                             name="Dog Breed"
@@ -54,7 +54,7 @@ function DogSubmit({ onAddDog }) {
                             onChange={(event) => setBreed(event.target.value)}
                         />
                         <input 
-                            className='dog-input'
+                            className='animal-input'
                             type="text"
                             placeholder="Image of the dog"
                             name="Dog Image"
@@ -64,7 +64,7 @@ function DogSubmit({ onAddDog }) {
                     </div>
                     <div className='four-six'>
                         <input 
-                            className='dog-input'
+                            className='animal-input'
                             type="number"
                             placeholder="Age of the dog"
                             name="Dog Age"
@@ -72,7 +72,7 @@ function DogSubmit({ onAddDog }) {
                             onChange={(event) => setAge(event.target.value)}
                         />
                         <input 
-                            className='dog-input'
+                            className='animal-input'
                             type="number"
                             placeholder="$ Amount"
                             name="Dog Price"
@@ -80,7 +80,7 @@ function DogSubmit({ onAddDog }) {
                             onChange={(event) => setPrice(event.target.value)}
                         />
                         <input 
-                            className='dog-input'
+                            className='animal-input'
                             type="number"
                             placeholder="Shelter I.D."
                             name="Dog Shelter I.D."
@@ -89,8 +89,8 @@ function DogSubmit({ onAddDog }) {
                         />
                     </div>
                     <textarea
-                        className='dog-input-text'
-                        name="Dog not"
+                        className='animal-input-text'
+                        name="Dog note"
                         type="text"
                         placeholder='Write a quick note about the dog here...'
                         value={note}

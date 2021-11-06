@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 function CatSubmit({ onAddCat }) {
     const [name, setName] = useState("")
     const [breed, setBreed] = useState("")
     const [imageUrl, setImageUrl] = useState("")
-    const [age, setAge] = useState(0)
-    const [price, setPrice] = useState(0)
+    const [age, setAge] = useState("")
+    const [price, setPrice] = useState("")
     const [note, setNote] = useState("")
-    const [shelterId, setShelterId] = useState(1)
+    const [shelterId, setShelterId] = useState("")
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -31,73 +31,74 @@ function CatSubmit({ onAddCat }) {
         .then((newCat) => onAddCat(newCat))
     }
     return(
-        <div className='submit-a-cat'> 
-        <Container fluid style={{ textAlign: "center", padding: "100px"}} >
-            <h1>If you would like to put a cat up for adoption<br />Please fill out the form below!</h1>
-            <form onSubmit={handleSubmit}>
-                <div className='input-cat'>
-                    <input 
-                        className='cat-input'
-                        type="text"
-                        placeholder="Name of the cat"
-                        name="Cat Name"
-                        value={name}
-                        onChange={(event) => setName(event.target.value)}
-                    />
-                    <input 
-                        className='cat-input'
-                        type="text"
-                        placeholder="Breed of the cat"
-                        name="Cat Breed"
-                        value={breed}
-                        onChange={(event) => setBreed(event.target.value)}
-                    />
-                    <input 
-                        className='cat-input'
-                        type="text"
-                        placeholder="Image of the cat"
-                        name="Cat Image"
-                        value={imageUrl}
-                        onChange={(event) => setImageUrl(event.target.value)}
-                    />
-                    <input 
-                        className='cat-input'
-                        type="number"
-                        placeholder="Age of the cat"
-                        name="Cat Age"
-                        value={age}
-                        onChange={(event) => setAge(event.target.value)}
-                    />
-                    <input 
-                        className='cat-input'
-                        type="number"
-                        placeholder="$ amount for adoption"
-                        name="Cat Price"
-                        value={price}
-                        onChange={(event) => setPrice(event.target.value)}
-                    />
-                    <input 
-                        className='cat-input'
-                        type="number"
-                        placeholder="Shelter I.D."
-                        name="cat Shelter I.D."
-                        value={shelterId}
-                        onChange={(event) => setShelterId(event.target.value)}
-                    />
+        <div className='submit-a-animal'> 
+        <Container fluid style={{ textAlign: "center" }} >
+            <h3 className='submit-header'>If you would like to put a cat up for adoption. Please fill out the form below!</h3>
+            <form onSubmit={handleSubmit} className="animal-form">
+                <div className='input-animal'>
+                    <div className='one-three'>
+                        <input 
+                            className='animal-input'
+                            type="text"
+                            placeholder="Name of the cat"
+                            name="Cat Name"
+                            value={name}
+                            onChange={(event) => setName(event.target.value)}
+                        />
+                        <input 
+                            className='animal-input'
+                            type="text"
+                            placeholder="Breed of the cat"
+                            name="Cat Breed"
+                            value={breed}
+                            onChange={(event) => setBreed(event.target.value)}
+                        />
+                        <input 
+                            className='animal-input'
+                            type="text"
+                            placeholder="Image of the cat"
+                            name="Cat Image"
+                            value={imageUrl}
+                            onChange={(event) => setImageUrl(event.target.value)}
+                        />
+                    </div>
+                    <div className='four-six'>
+                        <input 
+                            className='animal-input'
+                            type="number"
+                            placeholder="Age of the cat"
+                            name="Cat Age"
+                            value={age}
+                            onChange={(event) => setAge(event.target.value)}
+                        />
+                        <input 
+                            className='animal-input'
+                            type="number"
+                            placeholder="$ Amount"
+                            name="Cat Price"
+                            value={price}
+                            onChange={(event) => setPrice(event.target.value)}
+                        />
+                        <input 
+                            className='animal-input'
+                            type="number"
+                            placeholder="Shelter I.D."
+                            name="Cat Shelter I.D."
+                            value={shelterId}
+                            onChange={(event) => setShelterId(event.target.value)}
+                        />
+                    </div>
                     <textarea
-                        className='submit-cat-area'
+                        className='animal-input-text'
                         name="Cat note"
                         type="text"
                         placeholder='Write a quick note about the cat here...'
-                        rows={10}
                         value={note}
                         onChange={(event) => setNote(event.target.value)}
                     />
                     
                 </div>
-                <button className='submit-button' type='submit'>
-                    Submit For Adoption!
-                </button>
+                <Button variant="danger" type='submit' className='submit-button'>Submit For Adoption!</Button>
             </form>
         
         </Container>
