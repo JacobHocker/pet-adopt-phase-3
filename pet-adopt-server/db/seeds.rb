@@ -76,4 +76,3 @@ Exotic.create(
     shelter_id: 2
 )
 
-binding.pry
