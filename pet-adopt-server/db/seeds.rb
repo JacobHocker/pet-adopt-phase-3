@@ -21,12 +21,12 @@ Shelter.create(
 Shelter.create(
     #id: "shelter2",
     shelter_id: 2,
-    name: "Houston Humane Society",
-    shelter_img_url: "./images/houston-humane-society.jpg",
+    name: "Friends For Life Animal Shelter",
+    shelter_img_url: "./images/friends-for-life-animal-shelter.jpg",
     address: "14285 Cypress North Houston, Houston, Tx 77041 USA",
-    shelter_notes: "A shelter built around rescuing abdoned pets!",
+    shelter_notes: "Kill Animals",
     shelter_rating: 3.9,
-    kill_shelter: "No"
+    kill_shelter: "Yes"
 )
 puts 
 puts "Creating dogs..."

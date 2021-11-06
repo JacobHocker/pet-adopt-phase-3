@@ -56,12 +56,18 @@ function Display({ searchTerm, onChangeSearch, dogs, cats, exotics, onDeleteDog,
         <div className='display-all'>
             <Container fluid style={{ textAlign: "center", padding: "100px" }}>
                 <Search searchTerm={searchTerm} onChangeSearch={onChangeSearch} />
-                <h1>Dogs</h1>
-                <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{dogDisplayList}</CardGroup>
-                <h1>Cats</h1>
-                <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{catDisplayList}</CardGroup>
-                <h1>Exotic Animals</h1>
-                <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{exoticDisplayList}</CardGroup>
+                <div className='display-containers'>
+                    <h1 className='display-titles'>Dogs</h1>
+                    <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{dogDisplayList}</CardGroup>
+                </div>
+                <div className='display-containers'>
+                    <h1 className='display-titles'>Cats</h1>
+                    <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{catDisplayList}</CardGroup>
+                </div>
+                <div className='display-containers'>
+                    <h1 className='display-titles'>Exotic Animals</h1>
+                    <CardGroup style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>{exoticDisplayList}</CardGroup>
+                </div>
             </Container>
         </div>
     )

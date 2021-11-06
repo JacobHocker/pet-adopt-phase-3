@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 function DogSubmit({ onAddDog }) {
     const [name, setName] = useState("")
     const [breed, setBreed] = useState("")
     const [imageUrl, setImageUrl] = useState("")
-    const [age, setAge] = useState(0)
-    const [price, setPrice] = useState(0)
+    const [age, setAge] = useState("")
+    const [price, setPrice] = useState("")
     const [note, setNote] = useState("")
-    const [shelterId, setShelterId] = useState(1)
+    const [shelterId, setShelterId] = useState("")
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -32,72 +32,73 @@ function DogSubmit({ onAddDog }) {
     }
     return(
         <div className='submit-a-dog'> 
-        <Container fluid style={{ textAlign: "center", padding: "150px"}} >
-            <h1>If you would like to put a dog up for adoption<br />Please fill out the form below!</h1>
-            <form onSubmit={handleSubmit}>
+        <Container fluid style={{ textAlign: "center" }} >
+            <h3 className='submit-header'>If you would like to put a dog up for adoption. Please fill out the form below!</h3>
+            <form onSubmit={handleSubmit} className="dog-form">
                 <div className='input-dog'>
-                    <input 
-                        className='dog-input'
-                        type="text"
-                        placeholder="Name of the dog"
-                        name="Dog Name"
-                        value={name}
-                        onChange={(event) => setName(event.target.value)}
-                    />
-                    <input 
-                        className='dog-input'
-                        type="text"
-                        placeholder="Breed of the dog"
-                        name="Dog Breed"
-                        value={breed}
-                        onChange={(event) => setBreed(event.target.value)}
-                    />
-                    <input 
-                        className='dog-input'
-                        type="text"
-                        placeholder="Image of the dog"
-                        name="Dog Image"
-                        value={imageUrl}
-                        onChange={(event) => setImageUrl(event.target.value)}
-                    />
-                    <input 
-                        className='dog-input'
-                        type="number"
-                        placeholder="Age of the dog"
-                        name="Dog Age"
-                        value={age}
-                        onChange={(event) => setAge(event.target.value)}
-                    />
-                    <input 
-                        className='dog-input'
-                        type="number"
-                        placeholder="$ amount for adoption"
-                        name="Dog Price"
-                        value={price}
-                        onChange={(event) => setPrice(event.target.value)}
-                    />
-                    <input 
-                        className='dog-input'
-                        type="number"
-                        placeholder="Shelter I.D."
-                        name="Dog Shelter I.D."
-                        value={shelterId}
-                        onChange={(event) => setShelterId(event.target.value)}
-                    />
+                    <div className='one-three'>
+                        <input 
+                            className='dog-input'
+                            type="text"
+                            placeholder="Name of the dog"
+                            name="Dog Name"
+                            value={name}
+                            onChange={(event) => setName(event.target.value)}
+                        />
+                        <input 
+                            className='dog-input'
+                            type="text"
+                            placeholder="Breed of the dog"
+                            name="Dog Breed"
+                            value={breed}
+                            onChange={(event) => setBreed(event.target.value)}
+                        />
+                        <input 
+                            className='dog-input'
+                            type="text"
+                            placeholder="Image of the dog"
+                            name="Dog Image"
+                            value={imageUrl}
+                            onChange={(event) => setImageUrl(event.target.value)}
+                        />
+                    </div>
+                    <div className='four-six'>
+                        <input 
+                            className='dog-input'
+                            type="number"
+                            placeholder="Age of the dog"
+                            name="Dog Age"
+                            value={age}
+                            onChange={(event) => setAge(event.target.value)}
+                        />
+                        <input 
+                            className='dog-input'
+                            type="number"
+                            placeholder="$ Amount"
+                            name="Dog Price"
+                            value={price}
+                            onChange={(event) => setPrice(event.target.value)}
+                        />
+                        <input 
+                            className='dog-input'
+                            type="number"
+                            placeholder="Shelter I.D."
+                            name="Dog Shelter I.D."
+                            value={shelterId}
+                            onChange={(event) => setShelterId(event.target.value)}
+                        />
+                    </div>
                     <textarea
-                        className='submit-dog-area'
+                        className='dog-input-text'
                         name="Dog not"
                         type="text"
                         placeholder='Write a quick note about the dog here...'
-                        rows={10}
                         value={note}
                         onChange={(event) => setNote(event.target.value)}
                     />
                     
                 </div>
-                <button className='submit-button' type='submit'>
-                    Submit For Adoption!
-                </button>
+                <Button variant="danger" type='submit' className='submit-button'>Submit For Adoption!</Button>
             </form>
         
         </Container>

@@ -27,7 +27,6 @@ function ShelterContainer() {
             <Container fluid style={{ textAlign: "center" }} >
                 <Row>
                     <Col>
-                        <h1>Browse the list of shelters and their animals below:</h1>
                         {shelterList}
                     </Col>
                 </Row>    

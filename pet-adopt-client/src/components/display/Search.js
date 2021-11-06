@@ -8,7 +8,7 @@ function Search({ searchTerm, onChangeSearch }) {
 
     return(
         <div className='search-bar'>
-            <span>Search for animals!</span>
+            <h1>Search for animals!</h1>
             <input 
                 className='search'
                 type="text"

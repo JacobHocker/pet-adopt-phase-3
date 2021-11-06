@@ -13,20 +13,20 @@ function ExoticDisplay({ name, breed, image, age, price, note, onDeleteExotic, e
 
     return(
     <div className="exotic-display-container">
-        <Card  className="exotic-display-cards">
-            <Card.Img variant="top"  src={image} />
-            <Card.Body>
+        <Card  className="exotic-cards">
+            <Card.Img variant="top"  src={image} className="card-pic" />
+            <Card.Body className='display-card'>
                 <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                Breed: {breed}
-                </Card.Text>
                 <Card.Text>
                 Age: {age}
                 </Card.Text>
                 <Card.Text>
+                Breed: {breed}
+                </Card.Text>
+                <Card.Text>
                 Note about {name}: {note}
                 </Card.Text>
-                <Button variant="primary" onClick={handleDeleteClick}>Adopted!</Button>{' '}<Button variant="secondary">Edit Pet</Button>{' '}
+                <Button variant="danger" onClick={handleDeleteClick} className='adopt-button'>Adopted!</Button>
             </Card.Body>
             <Card.Footer>
                 <small className="text-muted">Price: ${price}.00</small>
