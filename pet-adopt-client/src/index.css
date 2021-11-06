@@ -9,6 +9,19 @@
 .exotic-cards {
     max-width: 300px;
 }
+
+.dog-display-cards {
+    max-width: 350px;
+}
+
+.cat-display-cards {
+    max-width: 350px;
+}
+
+.exotic-display-cards {
+    max-width: 350px;
+}
+
 .individual-shelter {
     padding: 50px;
     border: 1px dotted black;

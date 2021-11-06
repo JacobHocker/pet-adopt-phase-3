@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import ShelterContainer from "./shelter/ShelterContainer";
 import SubmitContainer from "./submit/SubmitContainer";
 import {  ShelterProvider } from "./shelter/ShelterProvider";
+import DisplayContainer from "./display/DisplayContainer";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path="/post-animal-for-adoption">
             <SubmitContainer />
+          </Route>
+          <Route exact path="/browse-all-animals">
+            <DisplayContainer />
           </Route>
         </Switch>
       </ShelterProvider>

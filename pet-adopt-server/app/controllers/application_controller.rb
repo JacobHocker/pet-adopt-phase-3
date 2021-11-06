@@ -57,4 +57,22 @@ class ApplicationController < Sinatra::Base
         )
         exotic.to_json
     end
+
+    delete "/dogs/:id" do
+        dog = Dog.find(params[:id])
+        dog.destroy
+        dog.to_json
+    end
+
+    delete "/cats/:id" do
+        cats = Cat.find(params[:id])
+        cats.destroy
+        cats.to_json
+    end
+
+    delete "/exotics/:id" do
+        exotic = Exotic.find(params[:id])
+        exotic.destroy
+        exotic.to_json
+    end
 end
