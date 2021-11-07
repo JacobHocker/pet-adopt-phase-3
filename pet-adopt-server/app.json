@@ -1,7 +1,0 @@
-{
-    "name": "Pet Adopt Server",
-    "description": "Ruby app with Sinatra",
-    "image": "heroku/ruby",
-    "repository": "https://github.com/JacobHocker/pet-adopt-phase-3",
-    "keywords": ["ruby", "rails" ]
-}
