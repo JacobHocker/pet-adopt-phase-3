@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 function ExoticDisplay({ name, breed, image, age, price, note, onDeleteExotic, exotic }) {
 
     function handleDeleteClick() {
-        fetch(`http://localhost:9129/exotics/${exotic.id}`, {
+        fetch(`http://localhost:9582/exotics/${exotic.id}`, {
             method: "DELETE",
         })
         .then((r) => r.json())

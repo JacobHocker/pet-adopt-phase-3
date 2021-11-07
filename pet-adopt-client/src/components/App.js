@@ -6,6 +6,7 @@ import ShelterContainer from "./shelter/ShelterContainer";
 import SubmitContainer from "./submit/SubmitContainer";
 import {  ShelterProvider } from "./shelter/ShelterProvider";
 import DisplayContainer from "./display/DisplayContainer";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/browse-all-animals">
             <DisplayContainer />
+          </Route>
+          <Route exact path="/contact-us">
+            <Contact />
           </Route>
         </Switch>
       </ShelterProvider>

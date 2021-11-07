@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 function ExoticPets({ name, breed, image, age, price, note }) {
     return(
         <div className="exotic-container">

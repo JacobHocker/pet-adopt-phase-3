@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Submit from "./Submit";
 import { Col, Container, Row } from 'react-bootstrap';
 
@@ -11,19 +11,19 @@ function SubmitContainer() {
    
 
     useEffect(() => {
-    fetch("http://localhost:9129/dogs")
+    fetch("http://localhost:9582/dogs")
     .then((r) => r.json())
     .then((dogs) => setDogs(dogs));
     }, [])
 
     useEffect(() => {
-    fetch("http://localhost:9129/cats")
+    fetch("http://localhost:9582/cats")
     .then((r) => r.json())
     .then((cats) => setCats(cats));
     }, [])  
 
     useEffect(() => {
-    fetch("http://localhost:9129/exotics")
+    fetch("http://localhost:9582/exotics")
     .then((r) => r.json())
     .then((exotics) => setExotics(exotics));
     }, [])

@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React from "react";
 import DogSubmit from "./DogSubmit";
 import CatSubmit from "./CatSubmit";
 import ExoticSubmit from "./ExoticSubmit";

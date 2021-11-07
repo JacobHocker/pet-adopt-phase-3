@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 function CatDisplay({ name, breed, image, age, price, note, onDeleteCat, cat}) {
    
     function handleDeleteClick() {
-        fetch(`http://localhost:9129/cats/${cat.id}`, {
+        fetch(`http://localhost:9582/cats/${cat.id}`, {
             method: "DELETE",
         })
         .then((r) => r.json())

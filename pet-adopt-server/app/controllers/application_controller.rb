@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
         cat.to_json
     end
 
-    post "/exotic" do 
+    post "/exotics" do 
         exotic = Exotic.create(
             name: params[:name],
             breed: params[:breed],

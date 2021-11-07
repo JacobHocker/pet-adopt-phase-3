@@ -3,7 +3,7 @@ import CatDisplay from './CatDisplay';
 import DogDisplay from './DogDisplay';
 import ExoticDisplay from './ExoticDisplay';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Search from "./Search";
 
 function Display({ searchTerm, onChangeSearch, dogs, cats, exotics, onDeleteDog, onDeleteCat, onDeleteExotic }) {

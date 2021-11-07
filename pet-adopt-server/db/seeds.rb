@@ -1,7 +1,4 @@
 puts "Destroying old data..."
-Dog.destroy_all
-Cat.destroy_all
-Exotic.destroy_all
 Shelter.destroy_all
 puts 
 
@@ -29,58 +26,4 @@ Shelter.create(
     kill_shelter: "Yes"
 )
 puts 
-puts "Creating dogs..."
-Dog.create(
-    name: "Rocko", 
-    breed: "Siberian Husky", 
-    image_url: "./images/husky-puppy.jpg",
-    age: 1,
-    price: 350,
-    note: "Rocko can be hard to make listen ,but will melt your heart with cuddling!",
-    shelter_id: 2)
-Dog.create(
-    name: "Walter", 
-    breed: "Dauschaund", 
-    image_url: "./images/weeny-puppy.jpg",
-    age: 1,
-    price: 120,
-    note: "Walter loves to burrow and go into small spaces",
-    shelter_id: 2)
-Dog.create(
-    name: "Titan", 
-    breed: "German Shepard", 
-    image_url: "./images/german-shepard-1.jpg",
-    age: 4,
-    price: 210,
-    note: "Very loyal and obedient dog.",
-    shelter_id: 1)
-    Dog.create(
-        name: "Jimmy", 
-        breed: "Siberian Husky", 
-        image_url: "./images/husky-1.jpg",
-        age: 8,
-        price: 500,
-        note: "Smart intuitive dog. Loves the cold & cheeseburgers!",
-        shelter_id: 1)
-puts 
-puts "Creating cats..."
-Cat.create(
-    name: "Nala",
-    breed: "Munchkin",
-    image_url: "./images/munchkin1.png",
-    age: 2,
-    price: 550,
-    note: "Loves to sleep ,and be held.",
-    shelter_id: 1)
-puts 
-puts "Creating exotic pets..."
-Exotic.create(
-    name: "Jar Jar",
-    breed: "Fennec Fox",
-    image_url: "./images/fennec1.png",
-    age: 6,
-    price: 2_000,
-    note: "Absolutley loves to burrow and being out in the heat!",
-    shelter_id: 2
-)
-
+puts "Created shelters...."

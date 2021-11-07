@@ -7,7 +7,7 @@ const ShelterProvider = props => {
     
 
     useEffect(() => {
-        fetch("http://localhost:9129/shelters")
+        fetch("http://localhost:9582/shelters")
         .then((r) => r.json())
         .then((shelters) => setShelters(shelters));
     }, [])

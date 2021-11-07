@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import Shelter from "./Shelter";
 import { Container, Row, Col } from 'react-bootstrap';
 import {  ShelterContext } from "./ShelterProvider";

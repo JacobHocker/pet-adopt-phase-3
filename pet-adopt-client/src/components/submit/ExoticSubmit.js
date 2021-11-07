@@ -12,7 +12,7 @@ function ExoticSubmit({ onAddExotic }) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        fetch("http://localhost:9129/exotics", {
+        fetch("http://localhost:9582/exotics", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function ExoticSubmit({ onAddExotic }) {
     return(
         <div className='submit-a-animal'> 
         <Container fluid style={{ textAlign: "center" }} >
-            <h3 className='submit-header'>If you would like to put a exotic animal up for adoption. Please fill out the form below!</h3>
+            <h3 className='submit-header'>If you would like to put a <strong>exotic animal</strong> up for adoption. Please fill out the form below!</h3>
             <form onSubmit={handleSubmit} className="animal-form">
                 <div className='input-animal'>
                     <div className='one-three'>
@@ -92,7 +92,7 @@ function ExoticSubmit({ onAddExotic }) {
                         className='animal-input-text'
                         name="Cat note"
                         type="text"
-                        placeholder='Write a quick note about the cat here...'
+                        placeholder='Write a quick note about the exotic animal here...'
                         value={note}
                         onChange={(event) => setNote(event.target.value)}
                     />

@@ -12,7 +12,7 @@ function DogSubmit({ onAddDog }) {
 
     function handleSubmit(event) {
         event.preventDefault()
-        fetch("http://localhost:9129/dogs", {
+        fetch("http://localhost:9582/dogs", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function DogSubmit({ onAddDog }) {
     return(
         <div className='submit-a-animal'> 
         <Container fluid style={{ textAlign: "center" }} >
-            <h3 className='submit-header'>If you would like to put a dog up for adoption. Please fill out the form below!</h3>
+            <h3 className='submit-header'>If you would like to put a <strong>dog</strong> up for adoption. Please fill out the form below!</h3>
             <form onSubmit={handleSubmit} className="animal-form">
                 <div className='input-animal'>
                     <div className='one-three'>
