@@ -68,7 +68,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 6.1)
-  pry (~> 0.14.1)
+  pry
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
   rake (~> 13.0)
@@ -78,6 +78,9 @@ DEPENDENCIES
   sinatra-activerecord (~> 2.0)
   sqlite3 (~> 1.4)
   thin (~> 1.8)
+
+RUBY VERSION
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.2.28
